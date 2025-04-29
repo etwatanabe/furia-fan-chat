@@ -1,4 +1,4 @@
-import React, { useState, KeyboardEvent as ReactKeyboardEvent } from 'react';
+import React, { useState, KeyboardEvent as ReactKeyboardEvent, useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import Loader from '../common/Loader';
 
@@ -77,11 +77,24 @@ const SendButton = styled.button`
 
 const ChatInput: React.FC<ChatInputProps> = ({ onSendMessage, isLoading, disabled }) => {
   const [message, setMessage] = useState('');
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (inputRef.current && !disabled) {
+      inputRef.current.focus();
+    }
+  }, [disabled]);
   
   const handleSendMessage = () => {
     if (message.trim() && !isLoading) {
       onSendMessage(message);
       setMessage('');
+      
+      setTimeout(() => {
+        if (inputRef.current) {
+          inputRef.current.focus();
+        }
+      }, 0);
     }
   };
   
@@ -100,6 +113,7 @@ const ChatInput: React.FC<ChatInputProps> = ({ onSendMessage, isLoading, disable
     <InputContainer>
       <InputForm onSubmit={handleSubmit}>
         <StyledInput
+          ref={inputRef}
           type="text"
           placeholder="Digite sua mensagem..."
           value={message}
