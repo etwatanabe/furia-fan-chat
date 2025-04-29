@@ -126,7 +126,7 @@ class BotService {
 // Verificações para perguntas gerais independente do estado atual
 const globalIntents = {
   // Estado para todas opções
-  all_options: ["todas opções", "todas as opções", "todos os tópicos", "menu completo", "ver tudo", "mostrar tudo", "opções", "ajuda", "o que você sabe", "do que podemos falar", "o que você pode fazer", "quais são os assuntos"],
+  all_options: ["todas opções", "todas as opções", "todos os tópicos", "menu", "menu completo", "ver tudo", "mostrar tudo", "opções", "ajuda", "o que você sabe", "do que podemos falar", "o que você pode fazer", "quais são os assuntos"],
   
   // Estados básicos
   next_game: ["próximo jogo", "próxima partida", "quando joga", "calendário", "agenda", "próxima live", "quando tem jogo", "joga quando", "data jogo", "quando é o jogo"],
