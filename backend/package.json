@@ -1,0 +1,26 @@
+{
+  "name": "furia-fan-chat",
+  "version": "1.0.0",
+  "description": "Chat application for FURIA fans to connect and interact.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js --ignore src/data/"
+  },
+  "dependencies": {
+    "axios": "^1.9.0",
+    "cheerio": "^1.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.14.0",
+    "puppeteer": "^24.7.2",
+    "uuid": "^11.1.0",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "author": "Eduardo Watanabe",
+  "license": "MIT"
+}
