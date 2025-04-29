@@ -5,7 +5,8 @@
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
-    "dev": "nodemon src/server.js --ignore src/data/"
+    "dev": "nodemon src/server.js --ignore src/data/",
+    "build": "echo 'Build step completed'"
   },
   "dependencies": {
     "axios": "^1.9.0",
