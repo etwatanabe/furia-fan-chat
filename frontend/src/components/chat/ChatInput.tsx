@@ -111,7 +111,7 @@ const ChatInput: React.FC<ChatInputProps> = ({ onSendMessage, isLoading, disable
           type="submit" 
           disabled={!message.trim() || isLoading || disabled}
         >
-          {isLoading ? <Loader size="small" color="white" /> : 'Enviar'}
+          Enviar
         </SendButton>
       </InputForm>
     </InputContainer>
