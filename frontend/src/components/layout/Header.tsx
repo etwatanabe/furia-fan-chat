@@ -56,17 +56,19 @@ const Nav = styled.nav<{ isOpen: boolean }>`
   align-items: center;
   
   @media (max-width: 768px) {
-    position: absolute;
+    position: fixed;
     top: 70px;
     right: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
     background-color: #111;
     flex-direction: column;
     width: 200px;
+    height: auto;
     border-left: 2px solid #ff5500;
     border-bottom: 2px solid #ff5500;
     transition: right 0.3s ease;
     padding: 20px 0;
     z-index: 999;
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.3);
   }
 `;
 
