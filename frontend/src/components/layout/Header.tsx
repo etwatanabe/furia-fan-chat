@@ -48,6 +48,7 @@ const LogoText = styled.span`
 const LogoRegularText = styled.span`
   color: #fff;
   font-size: 24px;
+  font-weight: 700;
 `;
 
 const Nav = styled.nav<{ isOpen: boolean }>`
