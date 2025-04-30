@@ -19,8 +19,8 @@ interface TimestampProps {
 const MessageContainer = styled.div<MessageContainerProps>`
   display: flex;
   flex-direction: column;
-  width: auto; /* Largura automática */
-  max-width: 80%; /* Limita a largura máxima a 80% do container */
+  width: auto;
+  max-width: 80%;
   align-self: ${props => props.isBot ? 'flex-start' : 'flex-end'};
 `;
 
@@ -32,16 +32,16 @@ const MessageHeader = styled.div<{ isBot: boolean }>`
 `;
 
 const SenderAvatar = styled.div`
-  width: 26px;
-  height: 26px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 7px;
+  margin-right: 10px;
   background-color: #ff5500;
-  background-image: url('/assets/images/furia-logo.png');
-  background-size: 90%;
+  background-image: url('/assets/images/chatbot-profile.jpg');
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 `;
@@ -57,12 +57,12 @@ const MessageBubble = styled.div<MessageContainerProps>`
   border-radius: 12px;
   color: #fff;
   background-color: ${props => props.isBot ? '#2b2b2b' : '#ff5500'};
-  white-space: pre-wrap; /* Mantém quebras de linha e permite quebra automática */
-  word-wrap: break-word; /* Força quebra de palavras longas */
-  overflow-wrap: break-word; /* Versão moderna de word-wrap */
+  white-space: pre-wrap;
+  word-wrap: break-word; 
+  overflow-wrap: break-word;
   line-height: 1.5;
   font-size: 15px;
-  max-width: 100%; /* Garante que não exceda o container */
+  max-width: 100%;
 `;
 
 const Timestamp = styled.span<TimestampProps>`
@@ -89,7 +89,7 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
     <MessageContainer isBot={message.isBot}>
       <MessageHeader isBot={message.isBot}>
         <SenderAvatar />
-        <SenderName>Bot FURIA</SenderName>
+        <SenderName>Panthera</SenderName>
       </MessageHeader>
       
       <MessageBubble isBot={message.isBot}>
