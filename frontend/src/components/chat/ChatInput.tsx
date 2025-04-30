@@ -1,6 +1,5 @@
 import React, { useState, KeyboardEvent as ReactKeyboardEvent, useRef, useEffect } from 'react';
 import styled from 'styled-components';
-import Loader from '../common/Loader';
 
 interface ChatInputProps {
   onSendMessage: (message: string) => void;
