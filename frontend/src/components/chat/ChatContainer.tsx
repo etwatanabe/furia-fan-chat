@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
+import { FaTrash } from 'react-icons/fa';
 import styled from 'styled-components';
 import { useChat } from '../../hooks/useChat';
 import ChatMessage from './ChatMessage';
@@ -88,6 +89,8 @@ const ErrorMessage = styled.div`
   font-size: 14px;
 `;
 
+const TrashIcon = FaTrash as unknown as React.FC<{ size?: number }>;
+
 const ChatContainer: React.FC = () => {
   const { state, sendMessage } = useChat();
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -144,7 +147,7 @@ const ChatContainer: React.FC = () => {
   return (
     <Container>
       <ClearButton onClick={handleClearHistory} title="Limpar histórico de conversa">
-        ✕
+        <TrashIcon size={16} />
       </ClearButton>
       <MessagesContainer ref={messagesContainerRef}>
         {processedMessages.length === 0 ? (
