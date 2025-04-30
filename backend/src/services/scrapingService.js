@@ -1,4 +1,4 @@
-const axios = require('axios');
+const cron = require('node-cron');
 const cheerio = require('cheerio');
 const puppeteer = require('puppeteer');
 const logger = require('../utils/logger');
@@ -6,6 +6,7 @@ const dialogTreeManager = require('./scraping/dialogTree');
 const matchExtractor = require('./scraping/matches');
 const lineupExtractor = require('./scraping/lineup');
 const formatters = require('./scraping/formatters');
+const env = require('../config/env');
 
 class ScrapingService {
   constructor() {
@@ -30,12 +31,45 @@ class ScrapingService {
       this.updateData().catch(err => 
         logger.warn(`Falha na atualização inicial de dados: ${err.message}`)
       );
+
+      this.setupScrapingSchedule();
       
       return this.dialogTree;
     } catch (error) {
       logger.error(`Erro ao inicializar serviço de scraping: ${error.message}`);
       this.dialogTree = dialogTreeManager.getDefaultTree();
       return this.dialogTree;
+    }
+  }
+
+  // Configurar agendamento de scraping
+  setupScrapingSchedule() {
+    if (env.NODE_ENV === 'production') {
+      // Executar uma vez por dia às 4 da manhã (quando o tráfego é baixo)
+      cron.schedule('0 0 4 * * *', async () => {
+        logger.info('Iniciando atualização agendada dos dados');
+        try {
+          await this.updateData();
+          logger.info('Atualização agendada concluída com sucesso');
+        } catch (error) {
+          logger.error(`Erro na atualização agendada: ${error.message}`);
+        }
+      });
+      
+      logger.info('Configurado agendamento de scraping para ambiente de produção');
+    } else {
+      // Configuração de desenvolvimento: a cada 30 minutos para testes
+      cron.schedule('0 */30 * * * *', async () => {
+        logger.info('Iniciando atualização de teste (desenvolvimento)');
+        try {
+          await this.updateData();
+          logger.info('Atualização de teste concluída');
+        } catch (error) {
+          logger.error(`Erro na atualização de teste: ${error.message}`);
+        }
+      });
+      
+      logger.info('Configurado agendamento de scraping para ambiente de desenvolvimento');
     }
   }
 
