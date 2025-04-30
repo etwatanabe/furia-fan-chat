@@ -61,13 +61,12 @@ function ensureNode(dialogTree, nodeKey, defaultOptions) {
 function getDefaultTree() {
   return {
     initial: {
-      content: "SALVE, FURIOSO! 🔥 #DIADEFURIA! Em que posso te ajudar hoje? Tudo sobre nosso esquadrão está aqui!",
+      content: "SALVE, FURIOSO! Panthera à teu dispor! Em que posso te ajudar? Se quiser ver tudo que sei, é só me pedir o 'menu'!",
       suggestedResponses: [
         "Próximo jogo",
         "Escalação atual", 
         "Resultados recentes",
         "Sobre a FURIA",
-        "Ranking mundial",
         "Perguntas frequentes"
       ],
       intents: {
@@ -75,7 +74,6 @@ function getDefaultTree() {
         current_lineup: ["escalação", "jogadores", "elenco", "time atual", "roster", "quem joga", "lineup", "formação atual", "quinteto", "equipe atual", "jogadores atuais"],
         match_history: ["resultados recentes", "histórico", "partidas anteriores", "últimos jogos", "últimas partidas", "como foi", "desempenho recente", "como jogou", "últimos mapas", "resultados"],
         about_furia: ["sobre a furia", "história", "organização", "quem é a furia", "informações", "surgiu", "fundação", "origem", "quando começou", "como surgiu", "história do time"],
-        world_ranking: ["ranking", "posição mundial", "hltv", "classificação", "top mundial", "melhor do mundo", "colocação", "posição no ranking", "entre os melhores", "ranking hltv"],
         faq: ["perguntas frequentes", "faq", "dúvidas comuns", "perguntas", "ajuda", "suporte", "queria saber", "como funciona", "me explica", "tenho uma dúvida"]
       }
     },
@@ -162,7 +160,7 @@ function getDefaultTree() {
     },
     
     team_stats: {
-      content: "Nosso time tá DEMOLINDO com mais de 60% de taxa de vitória! 🔥 Somos MONSTROS em Inferno e Ancient! Nosso CT é BRABO e com o Professor FalleN chamando as estratégias, não tem pra ninguém! É só respeitar o #DIADEFURIA!",
+      content: "Nosso time tá DEMOLINDO! 🔥 Somos MONSTROS em Inferno e Ancient! Nosso CT é BRABO e com o Professor FalleN chamando as estratégias, não tem pra ninguém! É só respeitar o #DIADEFURIA!",
       suggestedResponses: ["Melhores mapas", "Próximos torneios", "Voltar ao início"],
       intents: {
         best_maps: ["melhores mapas", "map pool", "preferidos", "estatísticas de mapas", "mapas fortes", "bons mapas"],
