@@ -75,11 +75,15 @@ O projeto é dividido em duas partes principais:
 #### Backend
 1. Clone o repositório
 ```bash
-git clone https://github.com/seu-usuario/furia-fan-chat.git
+git clone https://github.com/etwatanabe/furia-fan-chat.git
+```
+
+2. Navegue até a pasta do backend
+```bash
 cd furia-fan-chat/backend
 ```
 
-2. Instale as dependências
+3. Instale as dependências
 ```bash
 npm install
 ```
@@ -152,7 +156,7 @@ npm start
 ```
 
 ## Sistema de Scraping
-O sistema de scraping coleta dados em tempo real de diversas fontes:
+O sistema de scraping faz a coleta dados em tempo real:
 
 #### Funcionalidades de Scraping
 - Próximos Jogos: Data, hora e adversário
@@ -163,7 +167,7 @@ O sistema usa Puppeteer para acessar sites e Cheerio para extrair dados estrutur
 
 ## API
 #### Endpoints do Chatbot
-```GET /api/chatbot/initia```
+```GET /api/chatbot/initial```
 - **Descrição**: Obtém a mensagem inicial do chatbot
 - **Resposta**: ```{ message: string, suggestedResponses: string[], state: string }```
 
@@ -172,13 +176,5 @@ O sistema usa Puppeteer para acessar sites e Cheerio para extrair dados estrutur
 - **Corpo da requisição**: ```{ message: string, currentState: string }```
 - **Resposta**: ```{ userMessage: string, botResponse: string, suggestedResponses: string[], nextState: string }```
 
-```GET /api/match/next```
-- **Descrição**: Obtém informações sobre o próximo jogo
-- **Resposta**: ```{ opponent: string, date: Date, tournament: string, maps: string[] }```
-
-```GET /api/team/lineup```
-- **Descrição**: Obtém a escalação atual do time
-- **Resposta**: ```{ players: [{ name: string, role: string, nickname: string }] }```
-
 ## Armazenamento Local
-O frontend utiliza o localStorage para persistência de dados.
+O frontend utiliza o localStorage para persistência de dados do histórico de conversa.
