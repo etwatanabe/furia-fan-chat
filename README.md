@@ -12,7 +12,6 @@ Bem-vindo ao FURIA Fan Chat! Este projeto é uma aplicação de chatbot desenvol
 - [Sistema de Scraping](#sistema-de-scraping)
 - [API](#api)
 - [Armazenamento Local](#armazenamento-local)
-- [Licença](#licença)
 
 ## Sobre o Projeto
 FURIA Fan Chat é uma aplicação de chat interativa desenvolvida para os fãs do time de CS da FURIA. O projeto consiste em uma interface conversacional onde os usuários podem interagir com um chatbot para obter informações atualizadas sobre o time, jogadores, partidas, torneios e outras informações relacionadas à organização FURIA.
@@ -183,6 +182,3 @@ O sistema usa Puppeteer para acessar sites e Cheerio para extrair dados estrutur
 
 ## Armazenamento Local
 O frontend utiliza o localStorage para persistência de dados.
-
-## Licença
-Este projeto está licenciado sob a MIT License. Veja o arquivo LICENSE para mais detalhes.
