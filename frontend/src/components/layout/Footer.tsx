@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
           <a href="https://twitch.tv/furiatv" target="_blank" rel="noopener noreferrer">Twitch</a>
         </FooterLinks>
         <p>&copy; {new Date().getFullYear()} FURIA Fan Chat. Todos os direitos reservados.</p>
-        <p>Projeto desenvolvido para a vaga de assistente de desenvolvimento de software na FURIA.</p>
+        <p>Projeto desenvolvido para a vaga de assistente de engenheiro de software na FURIA.</p>
       </FooterContent>
     </FooterContainer>
   );
