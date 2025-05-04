@@ -88,7 +88,10 @@ cd furia-fan-chat/backend
 npm install
 ```
 
-3. Configure as variáveis de ambiente
+4. Configure as variáveis de ambiente
+- Faça uma cópia do arquivo ```.env.example```
+- Renomeie como ```.env```
+- Edite o arquivo ```.env``` de acordo com suas variáveis
 
 #### Frontend
 1. Navegue até a pasta do frontend
@@ -100,6 +103,11 @@ cd ../frontend
 ```bash
 npm install
 ```
+
+3. Configure as variáveis de ambiente
+- Faça uma cópia do arquivo ```.env.example```
+- Renomeie como ```.env```
+- Edite o arquivo ```.env``` de acordo com suas variáveis
 
 ## Como executar
 #### Backend
@@ -125,12 +133,43 @@ npm start
 - Histórico de Conversas: Armazenamento local das mensagens do usuário
 - Respostas Sugeridas: Botões para facilitar a navegação no diálogo
 - Design Responsivo: Adaptação para dispositivos móveis e desktop
+  
 #### Fluxos de Conversa
-- Informações sobre próximos jogos
-- Detalhes sobre a escalação atual
-- Histórico de partidas recentes
-- Curiosidades sobre os jogadores
-- Informações sobre a organização FURIA
+INFORMAÇÕES GERAIS
+- Próximo jogo
+- Escalação atual
+- Resultados recentes
+- Sobre a FURIA
+- Ranking mundial
+
+CONQUISTAS E HISTÓRIA
+- Conquistas
+- Valores da FURIA
+- História do time
+- Linha do tempo
+
+JOGADORES
+- Informações dos jogadores
+- Jogador destaque
+- Estatísticas individuais
+
+DESEMPENHO E ESTATÍSTICAS
+- Estatísticas do time
+- Melhores mapas
+
+COMPETIÇÕES
+- Competidores principais
+- Rivalidade histórica
+- Próximos torneios
+- Histórico de torneios
+- Partidas memoráveis
+
+SUPORTE E COMUNIDADE
+- Como apoiar a FURIA
+- Onde assistir jogos
+- Redes sociais
+- Loja oficial
+- Perguntas frequentes
 
 ## Árvore de Diálogo
 ```bash
